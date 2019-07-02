@@ -1,0 +1,25 @@
+<div 
+  [ngClass]="{
+    'gray': contador < 4,
+    'red': contador > 4
+  }"
+  >
+ O contador é {{ contador }}
+</div>
+
+<div *ngIf="number > 5">Contator passou de 5</div>
+
+<div [ngSwitch]="number">
+  <p *ngSwitchCase="3">
+    Igual a 3
+  </p>
+  <p *ngSwitchCase="5">
+    Igual a 5
+  </p>
+  <p *ngSwitchDefault>
+    Valor default
+  </p>
+</div>
+
+<button class="btn btn-primary" (click)="init()">init</button>
+<button class="btn btn-danger" (click)="stop()">stop</button>
